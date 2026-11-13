@@ -1,0 +1,12 @@
+[package]
+name = "zero2prod"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.14.1"
+
+
+
+[target.aarch64-apple-darwin]
+rustflags = ["-C", "link-arg=-fuse-ld=/opt/homebrew/opt/llvm/bin/ld64.lld"]
